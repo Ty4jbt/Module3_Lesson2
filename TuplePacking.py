@@ -15,10 +15,10 @@ def order_list(orders):
     formatted_orders = []
 
     # Loop through each order in the list and return an index ('index') and tuple ('order')
-    for index, order in enumerate(orders):
+    for index, (name, item, quantity) in enumerate(orders):
 
         # Append formatted string to the list: "Order (order num): (name) ordered (quantity) of (item)"
-        formatted_orders.append(f"Order {index+1}: {order[0]} ordered {order[2]} {order[1]}")
+        formatted_orders.append(f"Order {index+1}: {name} ordered {quantity} {item}")
 
     # Return the formatted strings as a single string with new lines
     return "\n".join(formatted_orders)

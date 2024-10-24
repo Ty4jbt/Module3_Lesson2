@@ -10,10 +10,10 @@ def itinerary_list(itinerary):
     formatted_itineraries = []
 
     # Loop through each itinerary in the list and return an index ('index') and tuple ('trip')
-    for index, trip in enumerate(itinerary):
+    for index, (name, origin, destination) in enumerate(itinerary):
 
         # Append formatted string to the list: "Itinerary (itinerary num): (name) - (origin) to (destination)"
-        formatted_itineraries.append(f"Itinerary {index+1}: {trip[0]} - {trip[1]} to {trip[2]}")
+        formatted_itineraries.append(f"Itinerary {index+1}: {name} - {origin} to {destination}")
 
     # Return the formatted strings as a single string with new lines
     return "\n".join(formatted_itineraries)
